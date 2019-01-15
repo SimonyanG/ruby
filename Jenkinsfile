@@ -3,7 +3,8 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'autoconf'
+        sh '''autoconf
+autoreconf --install'''
         sh './configure'
         sh 'make'
       }
