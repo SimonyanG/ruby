@@ -1,9 +1,10 @@
 pipeline {
   agent any
   stages {
-    stage('Test') {
+    stage('Build') {
       steps {
-        echo 'Hi there'
+        sh 'autoconf'
+        sh './configure'
       }
     }
   }
